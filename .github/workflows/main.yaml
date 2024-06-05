@@ -10,4 +10,13 @@ jobs:
         run: |
                pwd #
                echo "hello world"
+  hello_world_job1:
+    runs-on: ubuntu-latest
+    name: A job to say hello1
+    steps:
+      # Use the output from the `hello` step
+      - name: Get the output time1
+        run: |
+               pwd #
+               echo "hello world123"
 
