@@ -13,5 +13,6 @@ jobs:
       # Use the output from the `hello` step
       - name: Get the output time
         run: |
-               pwd #docker build -t test .
+               pwd #
+               docker build /home/runner/work/sample-dockerised-java-app/sample-dockerised-java-app -t test .
 
