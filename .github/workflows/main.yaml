@@ -3,20 +3,19 @@ on: [push]
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: Hello from Akhil!
     steps:
+      - name: Hello world action step
+        id: hello
+        uses: actions/hello-world-docker-action@v2
+        with:
+          who-to-greet: 'Hi'
       # Use the output from the `hello` step
       - name: Get the output time
-        run: |
-               pwd #
-               echo "hello world"
-  hello_world_job1:
-    runs-on: ubuntu-latest
-    name: A job to say hello1
-    steps:
-      # Use the output from the `hello` step
-      - name: Get the output time1
-        run: |
-               pwd #
-               echo "hello world123444"
+        run: | 
+          cd home/runner/work/HelloDockerWorld/HelloDockerWorld
 
+      # - name: Build Docker Images
+      #   shell: bash
+      #   id: docker-build-push
+      #   run: docker build -f /home/runner/work/HelloDockerWorld/HelloDockerWorld/DockerFile -t docker-image .
