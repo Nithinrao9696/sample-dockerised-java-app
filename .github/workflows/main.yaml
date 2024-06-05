@@ -14,7 +14,7 @@ jobs:
       - name: Get the output time
         run: | 
           pwd \
-          cd /home/runner/work/sample-dockerised-java-app \
+          cd /home/runner/work/sample-dockerised-java-app\sample-dockerised-java-app \
           find / -name "Dockerfile"
           ls
 
