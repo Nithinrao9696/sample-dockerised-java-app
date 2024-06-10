@@ -24,4 +24,4 @@ jobs:
       - name: Build Docker Images
         shell: bash
         id: docker-build-push
-        run: docker build -f . /Dockerfile -t docker-image .
+        run: docker build -f Dockerfile -t docker-image .
