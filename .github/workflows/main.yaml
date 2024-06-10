@@ -21,7 +21,7 @@ jobs:
           find / -name "Dockerfile"
           ls
 
-      # - name: Build Docker Images
-      #   shell: bash
-      #   id: docker-build-push
-      #   run: docker build -f /home/runner/work/HelloDockerWorld/HelloDockerWorld/DockerFile -t docker-image .
+      - name: Build Docker Images
+        shell: bash
+        id: docker-build-push
+        run: docker build -f . /Dockerfile -t docker-image .
